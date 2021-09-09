@@ -2,9 +2,8 @@
 
 ## Important Links
 
-- Add Some links https://somelink.com
-- https://somelink.com
-- https://somelink.com
+- https://hanseunglee.com
+- https://hanseunglee.com/aau/wnm617/lee.hanseung/
 
 ## Perhaps Some Notes
 
