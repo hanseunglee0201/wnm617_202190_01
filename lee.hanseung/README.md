@@ -3,7 +3,7 @@
 ## Important Links
 
 - https://hanseunglee.com
-- https://hanseunglee.com/aau/wnm617/lee.hanseung/
+- https://hanseunglee.com/aau/wnm617/lee.hanseung
 
 ## Perhaps Some Notes
 
