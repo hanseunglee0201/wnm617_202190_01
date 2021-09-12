@@ -7,7 +7,7 @@
 			<nav class="flex-none nav flex">
 				<ul>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="product_list.php">Products</a></li>
+					<!-- <li><a href="product_list.php">Products</a></li> -->
 					<li><a href="about.php">About Us</a></li>
 					<li><a href="product_cart.php">
 						<span>Cart</span>
