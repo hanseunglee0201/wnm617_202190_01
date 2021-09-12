@@ -1,0 +1,144 @@
+.dinnerware {
+	width: 100%;
+	margin: 3em 2.5em 0 0;
+}
+
+/* PRODUCT IN LIST */
+.product {
+   margin:0;
+   /*padding:1em;*/
+   border-radius:0.1em;
+   position:relative;
+   overflow:hidden;
+   background-color:white;
+   display:inline-block;
+   transition:all 0.3s;
+}
+.product:hover {
+   text-decoration:none;
+   box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+.product-image img {
+   max-width:100%;
+   vertical-align:middle;
+}
+.product-caption {
+   padding:1em 0em;
+   background-color:var(--color-neutral-light);
+   border-top: 0.25em solid var(--color-dark);
+}
+.product-price {
+   font-size: 0.9em;
+   font-weight: 400;
+   color:var(--color-dark);
+}
+.product-title {
+   font-size:1.1em;
+   font-weight: 400;
+   padding: 0.3em 0 0.4em 0;
+   color: var(--color-neutral-dark);
+   /*border-bottom: 0.1em solid var(--color-dark);*/
+}
+
+.product-description {
+   font-size:1em;
+   padding: 0em 0 1em 0;
+   border-bottom: 0.15em solid var(--color-dark);
+}
+
+
+.product-info {
+   font-size:0.75em;
+   font-weight: 600;
+   letter-spacing: 0.03em;
+   color:var(--color-neutral-dark);
+   padding: 1.1em 0 0.55em 0;
+}
+
+.product-detail {
+   font-size:1.1em;
+   padding: 0.7em 0;
+   color:var(--color-neutral-dark);
+}
+
+
+.image-main {
+   width: 100%;
+   height: 0;
+   position: relative;
+   padding-bottom: 100%;
+}
+
+.image-main img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.image-thumbs img {
+   width: 10em;
+   height: 10em;
+   object-fit: cover;
+}
+
+
+.product-display .product-title {
+   font-size:2.1em;
+   font-weight:300;
+}
+
+
+.product-list [class*='col-']>.card {
+   height:100%;
+}
+
+
+
+
+.card-section h2 {
+   margin: 0;
+}
+
+
+
+.navbar a {
+   position: relative;
+}
+.navbar .badge {
+   position: absolute;
+   top: 23px;
+   right: -19px;
+   font-size: 0.6em;
+   padding: 0.6em;
+   border-radius: 1em;
+   background-color: var(--color-highlight);
+   color: white;
+   line-height: 0.75;
+}
+.navbar .badge:empty {
+   display:none;
+}
+
+
+@media (max-width:1000px) {
+   .container {
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+}
+
+
+@media (max-width:500px) {
+   :root {
+      --header-height:2rem;
+   }
+}
+
+
+
+
+
+
