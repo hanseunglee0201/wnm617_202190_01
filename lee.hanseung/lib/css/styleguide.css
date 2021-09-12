@@ -33,10 +33,10 @@ body {
 	background-color: var(--color-neutral-light);
 }
 
-h1 { text-align: center;
+h1 { text-align: left;
 		padding: 2.3em 0em 0em 0em;
 		font-family: var(--sans-serif);
-		font-size: 3.3em;
+		font-size: 4em;
 		font-weight: 300;
 		margin: 0;
 }
@@ -98,10 +98,10 @@ h3 {text-align: left;
 		font-weight: 400;
 		margin-bottom: -0.3em;
 		line-height: 1.5em;
-		color: #4B392A;
+		color: #7b9e42;
 	}
 
-h4 {text-align: center;
+h4 {text-align: left;
 		font-family: var(--sans-serif);
 		font-size: 1.2em;
 		font-weight: 300;
@@ -143,7 +143,7 @@ a {
 
 /* LAYOUT CLASSES (this is not for design, it's for structure.) */
 .container {
-	max-width: 1280px;
+	max-width: 1350px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -175,8 +175,8 @@ a {
 
 /* COMPONENT CLASSES (design the bigger pieces of CSS) */
 .navbar {
-	background-color: var(--color-white);
-	color: var(--color-black);
+	background-color: black;
+	color: var(--color-white);
 	line-height: var(--header-height);
 }
 
@@ -228,7 +228,7 @@ a {
 	letter-spacing: 0.02em;
 	font-size: 0.95em;
 	font-weight: 500;
-	color: var(--color-black);
+	color: var(--color-white);
 }
 
 
@@ -243,7 +243,7 @@ a {
 	background-position: center;
 	background-attachment: fixed;
 
-	height: 55vh; /*vh is view height. */
+	height: 60vh; /*vh is view height. */
 }
 
 .center {
@@ -395,7 +395,7 @@ img {
 	margin-top: 6em;
 	position: relative;
 	overflow: hidden;
-	border-top: 0.1em solid #C0BEAC;
+	border-top: 0.1em solid #bdbdbd;
 }
 
 
@@ -485,7 +485,7 @@ img {
 .card.content.center {
 	border-radius: 0.2em;
 	margin: 1em 0em 0 0;
-	border-top: 0.5em solid var(--color-neutral-light);}
+	border-top: 0.5em solid var(--color-white);}
 
 
 .card.medium {
@@ -542,7 +542,7 @@ img {
 }
 
 footer {
-	background-color: #C0BEAC;
+	background-color: black;
 	height: 150px;
 }
 

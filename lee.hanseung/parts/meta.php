@@ -1,4 +1,4 @@
-<base href="/aau/wnm608/lee.hanseung/">
+<base href="/aau/wnm617/lee.hanseung/index.php">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

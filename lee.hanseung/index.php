@@ -40,7 +40,7 @@ include "parts/templates.php";
 		            <h3>Mobile</h3>
 		         	<h2>Project title</h2>
 					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-					<a class="button" href="product_list.php">Read more</a>
+					<!-- <a class="button" href="product_list.php">Read more</a> -->
 
 	         	</div>
 

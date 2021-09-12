@@ -6,13 +6,9 @@
 			<div class="flex-stretch"></div>
 			<nav class="flex-none nav flex">
 				<ul>
-					<li><a href="index.php">Work</a></li>
-					<!-- <li><a href="product_list.php">Products</a></li> -->
+					<li><a href="">Work</a></li>
 					<li><a href="about.php">About</a></li>
-					<li><a href="product_cart.php">
-						<span>Resume</span>
-		                <span class="badge"><?= makeCartBadge() ?></span>
-		            </a></li>
+					<li><a href="">Resume</a></li>
 				</ul>
 			</nav>
 		</div>
