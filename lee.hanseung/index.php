@@ -17,17 +17,16 @@ include "parts/templates.php";
 	<?php include "parts/navbar.php" ?>
 
 
-	<div class="view-window display-flex flex-align-center flex-justify-center" style="background-image: url(https://images.squarespace-cdn.com/content/v1/5442b6cce4b0cf00d1a3bef2/1593557313695-9EYZGRVU1WLFCTAVJQWE/ke17ZwdGBToddI8pDm48kH12H_EdUeZY-Tvv_svcNx9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI4AEFf-Jlj0yHs2ru3Hd-GQga4EnrFO4bxXsJo1lTp14KMshLAGzx4R3EDFOm1kBS/Ceramic-Plates-Mondays)">
-			<!-- <h2 class="card soft">Product</h2> -->
+	<!-- <div class="view-window display-flex flex-align-center flex-justify-center" style="background-image: url(https://images.squarespace-cdn.com/content/v1/5442b6cce4b0cf00d1a3bef2/1593557313695-9EYZGRVU1WLFCTAVJQWE/ke17ZwdGBToddI8pDm48kH12H_EdUeZY-Tvv_svcNx9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI4AEFf-Jlj0yHs2ru3Hd-GQga4EnrFO4bxXsJo1lTp14KMshLAGzx4R3EDFOm1kBS/Ceramic-Plates-Mondays)"> -->
 	</div>
 
 
 	<div class="container" style="margin-bottom: 1.5em;">
-		<h1>Goods of timeless and beautiful design</h1>
-		<h4>Since 2010 in California, Our products are made with thoughtfulness, honesty and pride. With the delicate<br>touch of professionals, our designs bring pure joy to your daily life and business.</h4>
-		<div class="center">
-			<a class="button1" href="about.php" style="font-size: 0.9em;">About Us</a>
-		</div>
+		<h1>This is Hanseung's WNM 617 page.</h1>
+		<h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h4>
+		<!-- <div class="center"> -->
+			<!-- <a class="button1" href="about.php" style="font-size: 0.9em;">About Us</a> -->
+		<!-- </div> -->
 	</div>
 
 
@@ -38,10 +37,10 @@ include "parts/templates.php";
 			<div class="grid gap">
 	         	<div class="col-xs-12 col-md-3">
 		            
-		            <h3>Bestsellers</h3>
-		         	<h2>Dinnerware</h2>
-					<p>Enjoy every day, and any special day with timeless, durable, handcrafted ceramic dinnerware.</p>
-					<a class="button" href="product_list.php">See all</a>
+		            <h3>Mobile</h3>
+		         	<h2>Project title</h2>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+					<a class="button" href="product_list.php">Read more</a>
 
 	         	</div>
 
@@ -50,14 +49,11 @@ include "parts/templates.php";
 				<div class="col-xs-12 col-md-4">
 						<img class="categoryimage" src="img/dinnerware_plate_3.png" alt="">
 	            </div>
-	            <div class="col-xs-12 col-md-4">
-						<img class="categoryimage" src="img/dinnerware_bowl_2.png" alt="">
-	            </div>
 	         </div>
 	     </div>    
 
 
-	     <div class="card" style="margin-bottom: 0em;">
+	     <!-- <div class="card" style="margin-bottom: 0em;">
 			 <div class="grid gap">
 			 	<div class="col-xs-12 col-md-4">
 						<img class="categoryimage" src="img/kitchen_cuttingboard_1.png" alt="">
@@ -76,7 +72,7 @@ include "parts/templates.php";
 					<a class="button" href="product_list.php">See all</a>
 	         	</div>
 	         </div>
-	     </div> 
+	     </div>
 
 
 
@@ -100,23 +96,23 @@ include "parts/templates.php";
 
 	          </div>
 	     </div>
-	 </div> 
+	 </div> -->
 
 
 
 
-		<div class="container quote">
-			<!-- <div class="container card">
+		  <div class="container quote">
+			 <div class="container card">
 					<article id="article3" class="card content center">
-						<h3 class="h3center">Our story</h3>-->
-						<p style="font-size: 2.5em; text-align: center; font-weight: 300; line-height: 1.em">"I have always wished I could learn to be a potter. I love collecting ceramics; it would be so fulfilling to create something lovely."</p>
-						<div class="article-body">
+						<!-- <h3 class="h3center">Our story</h3> -->
+						<p style="font-size: 2.5em; text-align: center; font-weight: 300; line-height: 1.em">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+						<!-- <div class="article-body">
 							<p style="font-size: 1em; text-align: center; font-weight: 300">— Julie Andrews</p>
-						</div>
+						</div> -->
+		    </div>
 		</div>
 		</div>
-	 <img src="img/making.jpg" alt="">
-
+	  <img src="img/making.jpg" alt="">
 
 	<?php include "parts/footer.php" ?>
 

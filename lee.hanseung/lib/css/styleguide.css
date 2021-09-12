@@ -6,7 +6,7 @@
 
 :root { /*root is the top level element of this document.*/
 	--color-neutral-light:#FAF9F1;
-	--color-neutral-medium:#C0BEAC;
+	--color-neutral-medium:#93b957;
 	--color-neutral-dark:#363635;
 
 	--color-white:#fff;
@@ -175,7 +175,7 @@ a {
 
 /* COMPONENT CLASSES (design the bigger pieces of CSS) */
 .navbar {
-	background-color: var(--color-neutral-medium);
+	background-color: var(--color-white);
 	color: var(--color-black);
 	line-height: var(--header-height);
 }
