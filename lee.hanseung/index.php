@@ -47,7 +47,7 @@ include "parts/templates.php";
 	         	<div class="col-xs-12 col-md-1"></div>
 
 				<div class="col-xs-12 col-md-4">
-						<img class="categoryimage" src="img/dinnerware_plate_3.png" alt="">
+						<!-- <img class="categoryimage" src="img/dinnerware_plate_3.png" alt=""> -->
 	            </div>
 	         </div>
 	     </div>    
@@ -102,7 +102,7 @@ include "parts/templates.php";
 
 
 		  <div class="container quote">
-			 <div class="container card">
+			 <div class="container card" style="border-top: 0em solid #bdbdbd;">
 					<article id="article3" class="card content center">
 						<!-- <h3 class="h3center">Our story</h3> -->
 						<p style="font-size: 2.5em; text-align: center; font-weight: 300; line-height: 1.em">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
@@ -112,7 +112,7 @@ include "parts/templates.php";
 		    </div>
 		</div>
 		</div>
-	  <img src="img/making.jpg" alt="">
+	  <!-- <img src="img/making.jpg" alt=""> -->
 
 	<?php include "parts/footer.php" ?>
 

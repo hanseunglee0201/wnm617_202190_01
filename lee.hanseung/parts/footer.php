@@ -1,5 +1,5 @@
 <footer class="footer">
-	<div style="background-color: black;">
+	<div style="background-color: #82985f;">
 	 		<div class="grid gap" style="padding: 2em;">
 	         	<div class="col-xs-12 col-md-9"><a href="index.php">Hanseung Lee</a><br><p style="padding-top: 2em; font-size: 0.8em;">©2021. All Rights Reserved.</p></div>
 
