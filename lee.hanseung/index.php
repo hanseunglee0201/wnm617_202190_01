@@ -23,7 +23,7 @@ include "parts/templates.php";
 
 	<div class="container" style="margin-bottom: 1.5em;">
 		<h1>This is Hanseung's WNM 617 page.</h1>
-		<h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h4>
+		<h4 style="width: 70%;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h4>
 		<!-- <div class="center"> -->
 			<!-- <a class="button1" href="about.php" style="font-size: 0.9em;">About Us</a> -->
 		<!-- </div> -->
@@ -105,7 +105,7 @@ include "parts/templates.php";
 			 <div class="container card" style="border-top: 0em solid #bdbdbd;">
 					<article id="article3" class="card content center">
 						<!-- <h3 class="h3center">Our story</h3> -->
-						<p style="font-size: 2.5em; text-align: center; font-weight: 300; line-height: 1.em">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+						<!-- <p style="font-size: 2.5em; text-align: center; font-weight: 300; line-height: 1.em">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p> -->
 						<!-- <div class="article-body">
 							<p style="font-size: 1em; text-align: center; font-weight: 300">— Julie Andrews</p>
 						</div> -->
