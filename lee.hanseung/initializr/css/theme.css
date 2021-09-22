@@ -1,5 +1,3 @@
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
-
 html {
     color: #f51a1a;
     font-size: 0.6em;
@@ -8,67 +6,26 @@ html {
 
 
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    margin: 1em 0;
-    padding: 0;
-}
-
-
-
 body {
     --font-sans: Lato, Helvetica, Arial, sans-serif;
     --font-serif: Cambria, Georgia, "Times New Roman", serif;
     background: #e4ddd6;
+    background-image: url("../img/flower.jpg");
 }
 
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
-
-
-
-.header-container {
-    border-bottom: 2px solid #f51a1a;
-}
-
-.main aside {
-    border: 1px solid #f51a1a;
-    border-top: 3.7px solid #f51a1a;
-    margin-top: 6em;
-    color: #f51a1a;
-    padding: 3em 2em 4.5em 3em;
-}
-
-.main aside:hover {
-    color: white;
-    background: #f51a1a;
-}
-
-
-.footer-container {
-    border-top: 1.5px solid #f51a1a;
-}
-
-
-.header-container,
-.footer-container,
-.main aside {
-    background: #e4ddd6;
-}
 
 .title {
+    float: left;
     color: #f51a1a;
     font-weight: normal;
     font-size: 2.5em;
 }
 
-/* ==============
-    MOBILE: Menu
-   ============== */
+
+nav {
+    float: right;
+    width: 36%;
+}
 
 nav ul {
     margin: 0;
@@ -86,11 +43,54 @@ nav a {
     font-size: 1.5em;
     color: #f51a1a;
     background: #e4ddd6;
+    float: left;
+    width: 27%;
+    margin: 0 1.7%;
+    padding: 25px 2%;
+    margin-bottom: 0;
 }
 
-nav a:hover,
-nav a:visited {
+
+nav a:hover {
     color: #f51a1a;
+    font-weight: normal;
+}
+
+
+nav li:first-child a {
+        margin-left: 0;
+    }
+
+nav li:last-child a {
+        margin-right: 0;
+}
+
+
+.wrapper {
+    width: 90%;
+    margin: 0 6%;
+}
+
+
+.header-container {
+    border-bottom: 2px solid #f51a1a;
+    background: #e4ddd6;
+}
+
+.main aside {
+    float: left;
+    width: 26%;
+    border: 1px solid #f51a1a;
+    border-top: 3.7px solid #f51a1a;
+    margin-top: 6em;
+    color: #f51a1a;
+    padding: 3em 2em 4.5em 3em;
+    background: #e4ddd6;
+}
+
+.main aside:hover {
+    color: white;
+    background: #f51a1a;
 }
 
 
@@ -99,10 +99,23 @@ nav a:visited {
     padding: 80px 0;
 }
 
+
+.main-container {
+    background: rgba(234, 229, 220, 0.6);
+
+}
+
 .main article h1 {
     font-size: 6em;
     font-weight: lighter;
 }
+
+.main article {
+    float: right;
+    width: 55%;
+    padding-top: 0em;
+}
+
 
 
 header p {
@@ -138,6 +151,13 @@ section {
     padding: 5em 0 5em 0;
 }
 
+
+.footer-container {
+    border-top: 1.5px solid #f51a1a;
+    background: #e4ddd6;
+}
+
+
 .footer-container footer {
     color: #f51a1a;
     padding: 20px 0;
@@ -148,63 +168,8 @@ footer {
     padding: 5em 0 5em 0;
 }
 
-@media only screen and (min-width: 480px) {
 
-    nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
-    }
-
-    nav li:first-child a {
-        margin-left: 0;
-    }
-
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
-}
-
-
-
-@media only screen and (min-width: 768px) {
-
-    .title {
-        float: left;
-    }
-
-    nav {
-        float: right;
-        width: 38%;
-    }
-
-
-    .main article {
-        float: right;
-        width: 55%;
-        padding-top: 0em;
-    }
-
-    .main aside {
-        float: left;
-        width: 26%;
-    }
-}
-
-
-
+/*Below is from the main.css*/
 .clearfix:before,
 .clearfix:after {
     content: " ";
