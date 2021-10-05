@@ -6,8 +6,8 @@
 
 
 ## Portfolio Links
-- http://hanseunglee.com/aau/wnm617/lee.hanseung/index.php
-- http://hanseunglee.com/aau/wnm617/lee.hanseung/about.php
+- http://hanseunglee.com/aau/wnm617/lee.hanseung/portfolio/index.php
+- http://hanseunglee.com/aau/wnm617/lee.hanseung/portfolio/about.php
 
 
 ## Demo Links
