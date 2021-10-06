@@ -10,6 +10,7 @@
     --color-white: #fff;
 
     --header-height:  3rem;
+    --footer-height:  3rem;
 }
 
 * {
@@ -24,7 +25,6 @@ a {
    text-decoration: none;
    font-weight: bold;
 }
-
 
 
 
@@ -54,8 +54,9 @@ a {
 [data-role="main"] {
    flex: 1 1 100%;
 }
-[data-role="header"],
-[data-role="footer"] {
+
+
+[data-role="header"] {
    flex: none;
    height: var(--header-height);
    line-height: var(--header-height);
@@ -65,6 +66,18 @@ a {
    position: relative;
    overflow: hidden;
 }
+
+[data-role="footer"] {
+   flex: none;
+   height: var(--footer-height);
+   line-height: var(--footer-height);
+   border-width: 0;
+   background-color: var(--color-white);
+   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+   position: relative;
+   overflow: hidden;
+}
+
 
 
 [data-role="header"] ul,

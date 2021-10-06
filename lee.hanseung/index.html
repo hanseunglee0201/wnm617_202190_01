@@ -5,6 +5,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PawPrint</title>
 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
    <base href="/aau/wnm617/lee.hanseung/">
 
    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
@@ -22,6 +26,7 @@
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
          <form data-ajax="false" class="form" id="signin-form" style="padding:10px">
+            <h1>Login</h1>
             <div class="form-control">
                <input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
             </div>
@@ -29,58 +34,219 @@
                <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
             </div>
             <div class="form-control">
-               <a href="#page-recent" class="form-button">Trial</a>
+               <a href="#page-map" class="form-button">Sign In</a>
+            </div>
+            <div class="form-control">
+               <p style="text-align: center; font-size: 0.9em; margin: 2em;">
+                  Don't have an account?  
+                  <a href="#page-signup" style="font-weight: 300; text-decoration: underline;">Sign Up</a>
+               </p>
+               <hr>
+               <p style="text-align: center;">
+                  <a href="#page-forgot-password" style="font-weight: 300; font-size: 0.9em; text-decoration: underline; margin: 2em;">Forgot Your Password?</a>
+               </p>
             </div>
          </form>
       </div>
    </section>
 
-   <section data-role="page" id="page-recent">
-      <div data-role="main">
-         MAP!
+
+
+   <!-- SIGN UP -->
+   <section data-role="page" id="page-signup">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+
+            <div class="form-control">
+               <input class="form-input" type="text" id="signup-firstname" data-role="none" placeholder="First Name">
+            </div>
+
+            <div class="form-control">
+               <input class="form-input" type="text" id="signup-lastname" data-role="none" placeholder="Last Name">
+            </div>
+
+            <div class="form-control">
+               <input class="form-input" type="text" id="signup-email" data-role="none" placeholder="E-mail">
+            </div>
+
+            <div class="form-control">
+               <input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Username">
+            </div> 
+
+            <div class="form-control">
+               <input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Password">
+            </div>
+
+            <div class="form-control">
+               <a href="#page-onboarding1" class="form-button">Sign Up</a>
+            </div>
+
+            <div class="form-control">
+               
+               <p style="text-align: center; font-size: 0.85em;">
+                  Already have an account?  
+                  <a href="#page-signin" style="font-weight: 400; text-decoration: underline;">Sign In</a>
+               </p>
+            </div>
+         </form>
       </div>
+   </section>
+
+
+   <!-- ONBOARDING 1 -->
+   <section data-role="page" id="page-onboarding1">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+
+            <div>
+               <h1>Onboarding</h1>
+               <p style="padding-bottom: 15px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque</p>
+            </div>
+
+               <div class="form-control" style="text-align: right"><a href="#page-onboarding2" class="form-button">Next</a></div>
+
+         </form>
+      </div>
+   </section>
+
+
+   <!-- ONBOARDING 2 -->
+   <section data-role="page" id="page-onboarding2">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+
+            <div>
+               <h1>Onboarding</h1>
+               <p style="padding-bottom: 15px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque</p>
+            </div>
+
+               <div class="form-control" style="text-align: right"><a href="#page-map" class="form-button">Done</a></div>
+
+         </form>
+      </div>
+   </section>
+
+
+   <!-- MAP -->
+   <section data-role="page" id="page-map">
+      <div data-role="main">
+         <div class="flex-stretch">
+            <div class="form-control" style="padding:10px">
+               <input class="form-input" type="text" id="search" data-role="none" placeholder="Search">
+            </div> 
+         </div>
+         <img src="img/map.png" alt="map" width="" height="600";>
+      </div>
+
+      <a href="#page-add" style="text-align: center;"><img src="img/add.svg" alt="addbutton" width="" height="50";></a>
+
       <footer data-role="footer">
          <ul>
-            <li><a href="#page-recent">Recent</a></li>
+            <li><a href="#page-map">Map</a></li>
             <li><a href="#page-list">List</a></li>
+            <li><a href="#page-favorites">Favorites</a></li>
             <li><a href="#page-user-profile">Profile</a></li>
          </ul>
       </footer>
    </section>
 
-   <section data-role="page" id="page-list">
-      <div data-role="main">
+
+   <!-- ADD NEW -->
+   <section data-role="page" id="page-add">
+      <header data-role="header">
+         <h1>Add New Animal</h1>
          <ul>
-            <!-- li*10>a[href=#page-animal-profile]{Animal $} -->
-            <li><a href="#page-animal-profile">Animal 1</a></li>
-            <li><a href="#page-animal-profile">Animal 2</a></li>
-            <li><a href="#page-animal-profile">Animal 3</a></li>
-            <li><a href="#page-animal-profile">Animal 4</a></li>
-            <li><a href="#page-animal-profile">Animal 5</a></li>
-            <li><a href="#page-animal-profile">Animal 6</a></li>
-            <li><a href="#page-animal-profile">Animal 7</a></li>
-            <li><a href="#page-animal-profile">Animal 8</a></li>
-            <li><a href="#page-animal-profile">Animal 9</a></li>
-            <li><a href="#page-animal-profile">Animal 10</a></li>
+            <li><a href="#" data-rel="back">Back</a></li>
          </ul>
+      </header>
+
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <form data-ajax="false" class="form" id="add-form" style="padding:10px;">
+
+            <div class="form-control">
+               <input class="form-input" type="text" id="add-category" data-role="none" placeholder="Choose category">
+            </div>
+
+            <div class="form-control">
+               <input class="form-input" type="text" id="add-name" data-role="none" placeholder="Name">
+            </div>
+
+            <div class="form-control">
+               <input class="form-input" type="text" id="add-location" data-role="none" placeholder="Location">
+            </div>
+
+            <div class="form-control">
+               <input class="form-input" type="text" id="add-date" data-role="none" placeholder="Date">
+            </div>
+
+            <div class="form-control">
+               <a href="#page-map" class="form-button">Add to the List</a>
+            </div>
+         </form>
+
+
+      </div>
+   </section>
+
+
+   <section data-role="page" id="page-list">
+      <header data-role="header">
+         <h1>List</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+            <!-- li*10>a[href=#page-animal-profile]{Animal $} -->
+          <div style="padding: 1em;">
+            <p>Recent Tracking</p>
+            <a href="#page-animal-profile">Animal</a>
+         </div>
+
+         <div style="padding: 1em;">
+            Tracking List
+            <ul>
+               <li><a href="#page-animal-profile">Animal 1</a></li>
+               <li><a href="#page-animal-profile">Animal 2</a></li>
+               <li><a href="#page-animal-profile">Animal 3</a></li>
+               <li><a href="#page-animal-profile">Animal 4</a></li>
+               <li><a href="#page-animal-profile">Animal 5</a></li>
+               <li><a href="#page-animal-profile">Animal 6</a></li>
+               <li><a href="#page-animal-profile">Animal 7</a></li>
+               <li><a href="#page-animal-profile">Animal 8</a></li>
+               <li><a href="#page-animal-profile">Animal 9</a></li>
+            </ul>
+         </div>
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#page-recent">Recent</a></li>
+            <li><a href="#page-map">Map</a></li>
             <li><a href="#page-list">List</a></li>
+            <li><a href="#page-favorites">Favorites</a></li>
             <li><a href="#page-user-profile">Profile</a></li>
          </ul>
       </footer>
    </section>
 
    <section data-role="page" id="page-user-profile">
+      <header data-role="header">
+         <h1>User Profile</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
       <div data-role="main">
          USER!
       </div>
       <footer data-role="footer">
          <ul>
-            <li><a href="#page-recent">Recent</a></li>
+            <li><a href="#page-map">Map</a></li>
             <li><a href="#page-list">List</a></li>
+            <li><a href="#page-favorites">Favorites</a></li>
             <li><a href="#page-user-profile">Profile</a></li>
          </ul>
       </footer>
@@ -88,13 +254,19 @@
 
    <section data-role="page" id="page-animal-profile">
       <header data-role="header">
-         <h1>Animal!</h1>
+         <h1>Animal Name</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
          </ul>
       </header>
       <div data-role="main">
-         Animal!
+         Animal Profile
+         <div class="form-control" style="padding: 0em 1em;">
+               <a href="#page-map" class="form-button">Edit</a>
+         </div>
+         <div class="form-control" style="padding: 0em 1em;">
+               <a href="#page-map" class="form-button">Delete</a>
+         </div>
       </div>
    </section>
    
