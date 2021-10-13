@@ -171,14 +171,15 @@ p {
     font: inherit;
 }
 
+.ui-input-btn,
 .form .form-button,
 .form-button {
     width: 100%;
     display: inline-block;
     border-width: 0;
-    color: var(--color-white);
     background-color: var(--color-main-medium);
-    margin: 0;
+    color: white;
+    margin: 0px;
     padding: 0.5em 1em;
     border-radius: 0.3em;
     outline: 0;
@@ -186,11 +187,24 @@ p {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+    font-weight: 400;
 }
 .ui-mobile .form-label {
    font-size: 0.8em;
    color: var(--color-neutral-medium);
    margin: 1rem 0 0;
+}
+
+/* SEARCH */
+.ui-input-text, .ui-input-search{
+  background-color: var(--color-white);
+  border-radius: 2em;
+  border: 0.12em solid var(--color-main-medium);
+  font: inherit;
+  padding: 0.5em 1em;
+  box-shadow: 0 0 7px rgb(0 0 0 / 0%);
+  margin: 1.25em 1em 0 1em;
+  color: var(--color-black);
 }
 
 
@@ -214,10 +228,14 @@ p {
 }
 
 
+.page-title {
+    margin-top: 40px;
+}
+
 
 .map {
    position: absolute;
-   top: 0;
+   top: 150px;
    left: 0;
    width: 100%;
    height: 100%;
@@ -305,11 +323,25 @@ p {
 
 
 
+.profile-img {
+  height: 17vh;
+  width: 17vh;
+  border-radius: 8em;
+  border: 0.3em solid var(--color-main-medium);
+  margin: 3em 0 1em 2em;
+  background-image: url(../img/profile-img.jpg);
+  background-size: cover;
+  background-position: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
 
 
 
-
-
-
+.pet-img {
+    background-image: url(../img/pet-img-1.jpg);
+    border-radius: 1em;
+    height: 25vh;
+    margin: 20px;
+}
 
 

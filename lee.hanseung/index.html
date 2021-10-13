@@ -130,7 +130,13 @@
    <!-- MAP -->
    <section data-role="page" id="page-map">
       <div data-role="main">
+         <h4 class="page-title">Hello Chris</h4>
          <div class="map"></div>
+         <div class="flex-stretch form-control">
+               <form action="" class="form-search">
+                  <input class="search-bar" type="text" name="search" placeholder="Search">
+               </form>
+            </div>
 
          <div class="floater bottom right">
             <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
@@ -144,6 +150,9 @@
          </ul>
       </footer>
 
+
+
+   <!-- MODAL POPUP -->
       <div class="modal" id="list-add-modal">
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
          <form class="modal-popup form" id="list-add-form" data-ajax="false">
@@ -274,15 +283,32 @@
 
 <!-- ANIMAL PROFILE -->
    <section data-role="page" id="page-animal-profile">
-      <header data-role="header">
-         <h1>Animal!</h1>
+         <header data-role="header">
+         <h1>Animal profile</h1>
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
          </ul>
       </header>
+
       <div data-role="main">
-         Animal!
+         <div class="pet-img"></div>
+         <h2 style="display: block; text-align: center;">Animal name</h2>
+
+         <p>info</p>
+         <div class="form-control" style="margin-top: 30px; padding: 20px;">
+                  <input type="submit" value="Edit" class="form-button">
+
+                  <input type="submit" value="Remove" class="form-button" style="background-color: var(--color-main-medium);">
+         </div>
       </div>
+
+      <footer data-role="footer">
+         <ul>
+            <li><a href="#page-map">Map</a></li>
+            <li><a href="#page-list">List</a></li>
+            <li><a href="#page-user-profile">Profile</a></li>
+         </ul>
+      </footer>
    </section>
 
 
@@ -298,11 +324,13 @@
       </header>
 
       <div data-role="main" class="overscroll">
-         <div>
-            <button class="form-button" style="padding:10px;">Edit Profile</button>
-         </div>
-         <div>
-            <button class="form-button js-logout">Log Out</button>
+         <div class="profile-img" style="display: block;"></div>
+         <h2 style="display: block; text-align: center;">Chris Smith</h2>
+
+         <p>chrissmith@gmail.com</p>
+         <div class="form-control" style="margin-top: 30px; padding: 20px;">
+                  <input type="submit" value="Edit Profile" class="form-button" style="background-color: var(--color-main-medium);">
+                  <button class="form-button js-logout">Log Out</button>
          </div>
       </div>
 
