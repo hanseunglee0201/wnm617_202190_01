@@ -4,8 +4,8 @@
     --color-neutral-dark: #444;
 
     --color-main-light: #def2f9;
-    --color-main-medium: #40a3c4;
-    --color-main-dark: #0f4557;
+    --color-main-medium: #52bd96;
+    --color-main-dark: #122D4E;
 
     --color-white: #fff;
     --color-black: #111;
@@ -20,6 +20,7 @@
 
 body {
   font-family:'Inter';
+  color: #52bd96;
 }
 
 
@@ -28,9 +29,14 @@ body {
 a {
    color: inherit;
    text-decoration: none;
-   font-weight: bold;
+   font-weight: 500;
 }
 
+p {
+  display: block;
+  text-align:center;
+  color: var(--color-main-dark)
+}
 
 
 /* LAYOUT CLASSES */
@@ -59,6 +65,12 @@ a {
 }
 
 
+.centered {
+    text-align:center;
+    color: var(--color-main-dark);
+    }
+
+.small { font-size: 0.9em; }
 
 
 /* PAGE ELEMENTS */
@@ -73,31 +85,22 @@ a {
 }
 
 [data-role="main"] {
-   flex: 1 1 100%;
-   position: relative;
+    flex: 1 1 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 
-[data-role="header"] {
-   flex: none;
-   height: var(--header-height);
-   line-height: var(--header-height);
-   border-width: 0;
-   background-color: var(--color-white);
-   box-shadow: 0 0 5px rgba(0,0,0,0.2);
-   position: relative;
-   overflow: hidden;
-}
-
+[data-role="header"], 
 [data-role="footer"] {
-   flex: none;
-   height: var(--footer-height);
-   line-height: var(--footer-height);
-   border-width: 0;
-   background-color: var(--color-white);
-   box-shadow: 0 0 5px rgba(0,0,0,0.2);
-   position: relative;
-   overflow: hidden;
+    flex: none;
+    height: var(--header-height);
+    line-height: var(--header-height);
+    border-width: 0;
+    background-color: var(--color-white);
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    position: relative;
+    overflow: hidden;
 }
 
 
@@ -135,12 +138,28 @@ a {
 }
 
 
+/* LOGIN BACKGROUND */
+.login-background {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url(../img/dogmoving.gif);
+    /* Copyright to KeDar Ambatkar. https://dribbble.com/shots/7197395-Weekly-Warm-up-4-Animated-Dog-Icon */
+    background-size: cover;
+    background-position: center;
+}
+
 
 /* FORM ELEMENTS */
 .form {}
 .form-control {
    margin: 1em 0;
 }
+
+
+
 .form-input {
     width: 100%;
     display: inline-block;
@@ -151,23 +170,14 @@ a {
     outline: 0;
     font: inherit;
 }
-.form-input {
-    width: 100%;
-    display: inline-block;
-    border-width: 0;
-    border-bottom: 1px solid var(--color-neutral-medium);
-    margin: 0;
-    padding: 0.5em 1em;
-    outline: 0;
-    background-color: transparent;
-    font: inherit;
-}
+
 .form .form-button,
 .form-button {
     width: 100%;
     display: inline-block;
     border-width: 0;
-    background-color: var(--color-neutral-light);
+    color: var(--color-white);
+    background-color: var(--color-main-medium);
     margin: 0;
     padding: 0.5em 1em;
     border-radius: 0.3em;
@@ -181,6 +191,26 @@ a {
    font-size: 0.8em;
    color: var(--color-neutral-medium);
    margin: 1rem 0 0;
+}
+
+
+/* WRAPPER */
+.wrapper {
+    background-color: var(--color-white);
+    position: relative;
+    width: 100%;
+    height: 60%;
+    box-shadow: 0px -2px 4px rgb(0 0 0 / 3%);
+    /*border-radius: 15px 15px 0 0;*/
+}
+
+.wrapper .title {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5em;
+    padding-top: 1.9em;
+    border-radius: 30px 30px 0 0;
 }
 
 
@@ -203,14 +233,17 @@ a {
 .floater.right { right:1em; }
 .floater.top { top:1em; }
 .floater.bottom { bottom:1em; }
+.floater.center {right:45%; left: 45%;}
+
 
 /* Circle Button */
 .btn-circle {
    display: inline-block;
-   background-color: var(--color-white);
+   background-color: var(--color-main-medium);
    width: 3rem;
    height: 3rem;
-   line-height: 3rem;
+   line-height: 2.75rem;
+   color: var(--color-white);
    text-align: center;
    font-size: 2.4rem;
    border-radius: 2em;
