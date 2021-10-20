@@ -175,6 +175,23 @@ p {
     font: inherit;
 }
 
+.form-input-lined {
+    display: inline-block;
+    width: 100%;
+    padding: 0.4em 0.7em;
+    font: inherit;
+    font-size: 1em;
+    color: var(--color-neutral-medium);
+    /*outline: 0;*/
+    background-color: transparent;
+    border-radius: 0;
+    border-width: 0;
+    border-bottom: 1px solid var(--color-neutral-medium);
+}
+
+
+
+
 .ui-input-btn,
 .form .form-button,
 .form-button {
@@ -334,6 +351,12 @@ p {
     padding: 10px;
     background-color: var(--color-white);
 }
+.modal-body-text {
+    
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
 .modal-head,
 .modal-foot {
     background-color: var(--color-neutral-light);
@@ -360,11 +383,14 @@ p {
 .nav-icon .icon {
    vertical-align: middle;
 }
+
 .nav-icon-label {
    display: block;
    line-height: 1rem;
    font-size: 0.7rem;
+   color: var(--color-main-dark);
 }
+
 .nav-icon-set li.active {
    background-color: var(--color-main-light);
 }
@@ -396,31 +422,37 @@ p {
    margin-top: 1em;
 }
 .animallist-item a {
-    box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0%);
     border-radius: 1em;
+    border: 0.15em solid var(--color-main-medium);
+    background-color: white;
     overflow: hidden;
     font-weight: normal;
 }
 .animallist-item-image img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
     vertical-align: middle;
     padding: 0.5em;
+    margin-top: 0.2em;
     border-radius: 50%;
 }
 .animallist-item-description {
 }
 .animallist-item-name {
-   font-size: 1.5em;
-   padding-top: 0.6em;
+   font-size: 1.2em;
+   padding-bottom: 0.2em;
    padding-left: 0.3em;
+   font-weight: 500;
 }
 .animallist-item-type,
 .animallist-item-breed {
-   font-size: 0.9em;
+   font-size: 0.8em;
    padding-left: 0.4em;
+   padding-top: 0.3em;
 }
+
 
 
 
@@ -434,7 +466,7 @@ p {
 
 .map-2 {
    position: absolute;
-   top: 320px;
+   top: 350px;
    left: 0;
    width: 100%;
    height: 100%;
@@ -445,7 +477,7 @@ p {
 
 
 
-/* ADD ANIMAL */
+
 
 
 

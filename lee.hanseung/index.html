@@ -154,32 +154,7 @@
    </section>
 
 
-   <!-- MODAL POPUP -->
-   <section>
-      <div class="modal" id="list-add-modal">
-         <div class="modal-back" data-deactivate="#list-add-modal"></div>
-         <form class="modal-popup form" id="list-add-form" data-ajax="false">
-            <div class="modal-head">Add Animal</div>
-            <div class="modal-body">
-               <div class="form-control">
-                  <label for="list-add-name" class="form-label">Name</label>
-                  <input type="text" id="list-add-name" class="form-input" data-role="none" placeholder="Name">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-type" class="form-label">Type</label>
-                  <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Name">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-breed" class="form-label">Breed</label>
-                  <input type="text" id="list-add-breed" class="form-input" data-role="none" placeholder="Name">
-               </div>
-            </div>
-            <div class="modal-foot">
-               <a href="#page-map" class="form-button" type="submit">Save</a>
-            </div>
-         </form>
-      </div>
-   </section>
+
 
 
 
@@ -214,6 +189,9 @@
    </section>
 
 
+
+
+<!-- ADD ANIMAL -->
    <section data-role="page" id="page-animal-add">
       <header data-role="header">
          <h1>Add Animal</h1>
@@ -226,16 +204,13 @@
             <div class="flex-stretch position-relative">
                <div class="fill-parent overscroll position-absolute padding-md">
                   <div class="form-control">
-                     <label for="animal-add-name" class="form-label">Name</label>
-                     <input type="text" id="animal-add-name" class="form-input" data-role="none" placeholder="Name">
+                     <input class="form-input-lined" type="text" id="edit-animal-name" data-role="none" placeholder="Name"><span class="label-animal-name"></span>
                   </div>
                   <div class="form-control">
-                     <label for="animal-add-type" class="form-label">Type</label>
-                     <input type="text" id="animal-add-type" class="form-input" data-role="none" placeholder="Name">
+                     <input class="form-input-lined" type="text" id="edit-animal-type" data-role="none" placeholder="Type"><span class="label-animal-name"></span>
                   </div>
                   <div class="form-control">
-                     <label for="animal-add-breed" class="form-label">Breed</label>
-                     <input type="text" id="animal-add-breed" class="form-input" data-role="none" placeholder="Name">
+                     <input class="form-input-lined" type="text" id="edit-animal-breed" data-role="none" placeholder="Breed"><span class="label-animal-breed"></span>
                   </div>
                </div>
             </div>
@@ -261,9 +236,12 @@
 
       <div data-role="main">
          <div class="pet-img"></div>
-         <h2 style="display: block; text-align: center;">Animal name</h2>
+         <h2 style="display: block; text-align: center;">Buddy</h2>
 
-         <p>info</p>
+         <div class="flex-stretch animallist-item-body padding-md" style="margin-top: -30px;">
+         <p style="color: var(--color-main-dark); margin-top: 5px"><span style="color: var(--color-main-medium); font-weight: 600;">Type </span>Dog</p>
+         <p style="color: var(--color-main-dark); margin-top: -3px"><span style="color: var(--color-main-medium); font-weight: 600;">Breed </span>Border Collie</p>
+      </div>
 
          <!-- <div class="animal-profile-middle">
             <ul class="nav">
@@ -276,15 +254,43 @@
          </div>
       </div>
 
-         <div class="form-control" style="margin-top: 30px; padding: 20px;">
+         <div class="form-control" style="margin-top: 10px; margin-bottom: 10px; padding: 20px;">
                   <input type="submit" value="Edit" class="form-button">
 
-                  <input type="submit" value="Remove" class="form-button" style="background-color: var(--color-main-medium);">
+                  <a href="" data-activate="#remove-modal"><input type="submit" value="Remove" class="form-button" style="background-color: var(--color-main-medium);"></a>
          </div>
+      </div>
+
+
+      <div class="modal" id="remove-modal">
+         <div class="modal-back" data-deactivate="#remove-modal"></div>
+         <form class="modal-popup form" id="list-add-form" data-ajax="false">
+            <div class="modal-body">
+               <p class="modal-body-text">This item will be deleted from your list.</p>
+            </div>
+            <div class="modal-foot">
+               <a href="#page-list" class="form-button">Delete</a>
+            </div>
+         </form>
       </div>
 
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
+
+
+
+   <!-- MODAL POPUP -->
+<!--       <div class="modal" id="remove-modal">
+         <div class="modal-back" data-deactivate="#remove-modal"></div>
+         <form class="modal-popup form" id="list-add-form" data-ajax="false">
+            <div class="modal-body">
+               <p class="modal-body-text">This item will be deleted from your list.</p>
+            </div>
+            <div class="modal-foot">
+               <button type="submit" class="form-button">Save</button>
+            </div>
+         </form>
+      </div> -->
 
 
 
@@ -352,12 +358,12 @@
    <script type="text/template" id="animallist-item-template">
    <a href="#page-animal-profile" class="display-flex">
       <div class="flex-none animallist-item-image">
-         <img src="https://via.placeholder.com/400x400?text=Animal" alt="">
+         <img src="img/pet-img-1.jpg" alt="">
       </div>
       <div class="flex-stretch animallist-item-body padding-md">
-         <div class="animallist-item-name">Animal</div>
-         <div class="animallist-item-type"><strong>Type</strong> Animal</div>
-         <div class="animallist-item-breed"><strong>Breed</strong> Animal</div>
+         <div class="animallist-item-name">Buddy</div>
+         <div class="animallist-item-type"><strong>Type</strong> Dog</div>
+         <div class="animallist-item-breed"><strong>Breed</strong> Border Collie</div>
       </div>
    </a>
    </script>
