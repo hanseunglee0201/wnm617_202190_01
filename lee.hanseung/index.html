@@ -133,7 +133,7 @@
          <div class="map">
             <div class="flex-stretch form-control">
                <form action="" class="form-search">
-                  <input class="search-bar" type="text" name="search" placeholder="Search">
+                  <input class="search-bar" type="text" name="search" placeholder="Search" style="margin: 4px -3px;">
                </form>
             </div>
          </div>
@@ -142,7 +142,7 @@
 
          <div class="floater" style="top:20%;left:20%;">
             <a href="#" data-activate="#recent-add-modal"><div class="icon-marker">
-                  <img class="map-item-img" src="img/pet-img-1.jpg" alt="">
+                  <img class="map-item-img" src="img/pet-img-1.jpg" alt="" style="transform: rotate(47deg); margin-left: -28px; height: 130%;">
                </div></a>
          </div>
 
@@ -162,7 +162,17 @@
 
    <!-- LIST -->
    <section data-role="page" id="page-list">
+      <header data-role="header">
+         <h1>Animal List</h1>
+      </header>
+
       <div data-role="main">
+         <div class="flex-stretch form-control">
+               <form action="" class="form-search">
+                  <input class="search-bar" type="text" name="search" placeholder="Search" style="margin: 4px -3px;">
+               </form>
+
+         </div>
          <div class="overscroll floater fill-parent">
             <ul class="animallist">
                <li class="animallist-item" data-template="#animallist-item-template"></li>
@@ -242,20 +252,14 @@
          <p style="color: var(--color-main-dark); margin-top: 5px"><span style="color: var(--color-main-medium); font-weight: 600;">Type </span>Dog</p>
          <p style="color: var(--color-main-dark); margin-top: -3px"><span style="color: var(--color-main-medium); font-weight: 600;">Breed </span>Border Collie</p>
       </div>
-
-         <!-- <div class="animal-profile-middle">
-            <ul class="nav">
-               <li>map</li>
-               <li>description</li>
-            </ul>
-         </div> -->
          <div class="animal-profile-bottom">
             <div class="map-2"></div>
          </div>
       </div>
 
          <div class="form-control" style="margin-top: 10px; margin-bottom: 10px; padding: 20px;">
-                  <input type="submit" value="Edit" class="form-button">
+
+                  <a href="#page-animal-add" data-deactivate="#page-animal-profile"><input type="submit" value="Edit" class="form-button" style="background-color: var(--color-main-medium);"></a>
 
                   <a href="" data-activate="#remove-modal"><input type="submit" value="Remove" class="form-button" style="background-color: var(--color-main-medium);"></a>
          </div>
@@ -299,18 +303,16 @@
    <section data-role="page" id="page-user-profile">
       <header data-role="header">
          <h1>User profile</h1>
-         <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
-         </ul>
       </header>
 
       <div data-role="main" class="overscroll">
          <div class="profile-img" style="display: block;"></div>
-         <h2 style="display: block; text-align: center;">Chris Smith</h2>
+         <h2 style="display: block; text-align: center; margin-top: -13px;">Chris Smith</h2>
 
          <p>chrissmith@gmail.com</p>
          <div class="form-control" style="margin-top: 30px; padding: 20px;">
-                  <input type="submit" value="Edit Profile" class="form-button" style="background-color: var(--color-main-medium);">
+                  <a href="#page-eidt-profile" class="form-button" style="margin-bottom: 13px">Edit Profile</a>
+
                   <button class="form-button js-logout">Log Out</button>
          </div>
       </div>
@@ -320,20 +322,30 @@
 
 
    <!-- EDIT PROFILE -->
-      <section data-role="page" id="page-eidt-profile">
-         <header data-role="header">
-         <h1>Edit Profle</h1>
+   <section data-role="page" id="page-eidt-profile">
+      <header data-role="header">
+         <h1>Edit Profile</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back">Cancel</a></li>
          </ul>
       </header>
-
-      <div data-role="main" class="overscroll">
-         <div>
-            <button class="form-button" style="padding:10px;">Done</button>
-         </div>
+      <div data-role="main">
+         <form class="fill-parent display-flex flex-vertical" id="animal-add-form" data-ajax="false">
+            <div class="flex-stretch position-relative">
+               <div class="fill-parent overscroll position-absolute padding-md">
+                  <div class="form-control">
+                     <input class="form-input-lined" type="text" id="edit-user-name" data-role="none" placeholder="Username"><span class="label-animal-name"></span>
+                  </div>
+                  <div class="form-control">
+                     <input class="form-input-lined" type="text" id="edit-user-email" data-role="none" placeholder="Email"><span class="label-animal-name"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="flex-none padding-md">
+               <a href="#page-user-profile" class="form-button">Save</a>
+            </div>
+         </form>
       </div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
 
@@ -362,8 +374,9 @@
       </div>
       <div class="flex-stretch animallist-item-body padding-md">
          <div class="animallist-item-name">Buddy</div>
-         <div class="animallist-item-type"><strong>Type</strong> Dog</div>
-         <div class="animallist-item-breed"><strong>Breed</strong> Border Collie</div>
+
+         <p style="color: var(--color-main-dark); margin-top: 7px; text-align: left;"><span style="color: var(--color-main-medium); font-weight: 600;">Type </span>Dog</p>
+         <p style="color: var(--color-main-dark); margin-top: -9px; text-align: left; margin-bottom: 0px;"><span style="color: var(--color-main-medium); font-weight: 600;">Breed </span>Border Collie</p>
       </div>
    </a>
    </script>
