@@ -56,6 +56,7 @@
 
 
 
+
    <!-- SIGN UP -->
    <section data-role="page" id="page-signup">
       <div data-role="main" class="display-flex flex-vertical">
@@ -141,8 +142,6 @@
             </div>
          </div>
 
-         
-
          <div class="floater" style="top:20%;left:20%;">
             <a href="#" data-activate="#recent-add-modal"><div class="icon-marker">
                   <img class="map-item-img" src="img/pet-img-1.jpg" alt="" style="transform: rotate(47deg); margin-left: -28px; height: 130%;">
@@ -155,9 +154,6 @@
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
-
-
-
 
 
 
@@ -199,7 +195,7 @@
          </ul>
       </header>
       <div data-role="main">
-         <form class="fill-parent display-flex flex-vertical" id="animal-add-form" data-ajax="false">
+         <form class="fill-parent display-flex flex-vertical" id="animal-add-form2" data-ajax="false">
             <div class="flex-stretch position-relative">
                <div class="fill-parent overscroll position-absolute padding-md">
                   <div class="form-control">
@@ -223,7 +219,6 @@
 
 
 
-
 <!-- ANIMAL PROFILE -->
    <section data-role="page" id="page-animal-profile">
       <header data-role="header">
@@ -234,13 +229,15 @@
       </header>
 
       <div data-role="main">
-         <div class="pet-img"></div>
-         <h2 style="display: block; text-align: center;">Buddy</h2>
-
-         <div class="flex-stretch animallist-item-body padding-md" style="margin-top: -30px;">
-         <p style="color: var(--color-main-dark); margin-top: 5px"><span style="color: var(--color-main-medium); font-weight: 600;">Type </span>Dog</p>
-         <p style="color: var(--color-main-dark); margin-top: -3px"><span style="color: var(--color-main-medium); font-weight: 600;">Breed </span>Border Collie</p>
-      </div>
+         <div class="animal-profile-top">
+            <img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:100%;object-fit:cover">
+         </div>
+         <div class="animal-profile-middle">
+            <ul class="nav">
+               <li>map</li>
+               <li>description</li>
+            </ul>
+         </div>
          <div class="animal-profile-bottom">
             <div class="map-2"></div>
          </div>
@@ -297,6 +294,7 @@
       <div data-role="main" class="overscroll"></div>
    <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
+
 
 
 
