@@ -26,8 +26,14 @@ const MapPage = async() => {
       params:[sessionStorage.userId]
    });
 
-   let mapEl = makeMap("#page-map .map");
-   makeMarkers(mapEl,result);
+   let animals = result.reduce((r,o)=>{
+      o.icon = o.img;
+      if(o.lat && o.lng) r.push(o);
+      return r;
+   },[]);
+
+   let mapEl = await makeMap("#page-map .map");
+   makeMarkers(mapEl,animals);
 }
 
 
@@ -49,13 +55,28 @@ const AnimalProfilePage = async() => {
 
    let [animal] = animal_result;
    $(".animal-profile-top img").attr("src",animal.img);
+   $(".animal-profile-bottom .description").html(animal.description);
 
    let locations_result = await resultQuery({
       type:'locations_by_animal_id',
       params:[sessionStorage.animalId]
    });
-   let mapEl = makeMap("#page-animal-profile .map");
+   let mapEl = await makeMap("#page-animal-profile .map");
    makeMarkers(mapEl,locations_result);
+ }
+
+ const AnimalEditPage = async() => {
+   let animal_result = await resultQuery({
+      type:'animal_by_id',
+      params:[sessionStorage.animalId]
+   });
+
+   let [animal] = animal_result;
+   $(".animal-profile-top img").attr("src",animal.img);
+
+   $("#animal-edit-name").val(animal.name);
+   $("#animal-edit-type").val(animal.type);
+   $("#animal-edit-breed").val(animal.breed);
  }
 
 

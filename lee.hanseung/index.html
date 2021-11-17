@@ -193,13 +193,13 @@
             <div class="flex-stretch position-relative">
                <div class="fill-parent overscroll position-absolute padding-md">
                   <div class="form-control">
-                     <input class="form-input-lined" type="text" id="edit-animal-name" data-role="none" placeholder="Name"><span class="label-animal-name"></span>
+                     <input class="form-input-lined" type="text" id="add-animal-name" data-role="none" placeholder="Name"><span class="label-animal-name"></span>
                   </div>
                   <div class="form-control">
-                     <input class="form-input-lined" type="text" id="edit-animal-type" data-role="none" placeholder="Type"><span class="label-animal-name"></span>
+                     <input class="form-input-lined" type="text" id="add-animal-type" data-role="none" placeholder="Type"><span class="label-animal-name"></span>
                   </div>
                   <div class="form-control">
-                     <input class="form-input-lined" type="text" id="edit-animal-breed" data-role="none" placeholder="Breed"><span class="label-animal-breed"></span>
+                     <input class="form-input-lined" type="text" id="add-animal-breed" data-role="none" placeholder="Breed"><span class="label-animal-breed"></span>
                   </div>
                </div>
             </div>
@@ -210,6 +210,44 @@
          </form>
       </div>
    </section>
+
+
+
+
+<!-- EDIT ANIMAL -->
+      <section data-role="page" id="page-animal-edit">
+      <header data-role="header">
+         <h1>Edit Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form class="fill-parent display-flex flex-vertical" id="animal-edit-form" data-ajax="false">
+            <div class="flex-stretch position-relative">
+               <div class="fill-parent overscroll position-absolute padding-md">
+                  <div class="form-control">
+                     <label for="animal-edit-name" class="form-label">Name</label>
+                     <input type="text" id="animal-edit-name" class="form-input" data-role="none" placeholder="Name">
+                  </div>
+                  <div class="form-control">
+                     <label for="animal-edit-type" class="form-label">Type</label>
+                     <input type="text" id="animal-edit-type" class="form-input" data-role="none" placeholder="Name">
+                  </div>
+                  <div class="form-control">
+                     <label for="animal-edit-breed" class="form-label">Breed</label>
+                     <input type="text" id="animal-edit-breed" class="form-input" data-role="none" placeholder="Name">
+                  </div>
+               </div>
+            </div>
+            <div class="flex-none padding-md">
+               <!-- <button type="submit" class="form-button">Save</button> -->
+               <a href="#page-list" class="form-button">Save</a>
+            </div>
+         </form>
+      </div>
+   </section>
+
 
 
 
