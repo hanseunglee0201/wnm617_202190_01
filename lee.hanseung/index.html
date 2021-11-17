@@ -20,7 +20,13 @@
    <script src="js/functions.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
+   <script src="js/maps.js"></script>
    <script src="js/signin.js"></script>
+
+   <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6Xi45wgJ2llOSfYWqEgEsUEKzG3MmbSI"
+      async
+    ></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
@@ -134,19 +140,7 @@
    <!-- MAP -->
    <section data-role="page" id="page-map">
       <div data-role="main">
-         <div class="map">
-            <div class="flex-stretch form-control">
-               <form action="" class="form-search">
-                  <input class="search-bar" type="text" name="search" placeholder="Search" style="margin: 4px -3px;">
-               </form>
-            </div>
-         </div>
-
-         <div class="floater" style="top:20%;left:20%;">
-            <a href="#" data-activate="#recent-add-modal"><div class="icon-marker">
-                  <img class="map-item-img" src="img/pet-img-1.jpg" alt="" style="transform: rotate(47deg); margin-left: -28px; height: 130%;">
-               </div></a>
-         </div>
+         <div class="map"></div>
 
          <div class="floater bottom right">
             <a href="#page-animal-add" class="btn-circle">&plus;</a>
@@ -170,8 +164,8 @@
                <form action="" class="form-search">
                   <input class="search-bar" type="text" name="search" placeholder="Search" style="margin: 4px -3px;">
                </form>
-
          </div>
+
          <div class="overscroll floater fill-parent">
             <div class="animallist"></div>
          </div>
@@ -221,14 +215,7 @@
 
 <!-- ANIMAL PROFILE -->
    <section data-role="page" id="page-animal-profile">
-      <header data-role="header">
-         <h1>Animal profile</h1>
-         <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
-         </ul>
-      </header>
-
-      <div data-role="main">
+      <div data-role="main" class="display-flex flex-vertical">
          <div class="animal-profile-top">
             <img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:100%;object-fit:cover">
          </div>
@@ -239,33 +226,19 @@
             </ul>
          </div>
          <div class="animal-profile-bottom">
-            <div class="map-2"></div>
+            <div class="map"></div>
+            <div class="description"></div>
          </div>
       </div>
-
-         <div class="form-control" style="margin-top: 10px; margin-bottom: 10px; padding: 20px;">
-
-                  <a href="#page-animal-add" data-deactivate="#page-animal-profile"><input type="submit" value="Edit" class="form-button" style="background-color: var(--color-main-medium);"></a>
-
-                  <a href="" data-activate="#remove-modal"><input type="submit" value="Remove" class="form-button" style="background-color: var(--color-main-medium);"></a>
-         </div>
-      </div>
-
-
-      <div class="modal" id="remove-modal">
-         <div class="modal-back" data-deactivate="#remove-modal"></div>
-         <form class="modal-popup form" id="list-add-form" data-ajax="false">
-            <div class="modal-body">
-               <p class="modal-body-text">This item will be deleted from your list.</p>
-            </div>
-            <div class="modal-foot">
-               <a href="#page-list" class="form-button">Delete</a>
-            </div>
-         </form>
-      </div>
-
-      <footer data-role="footer" data-template="#footer-template"></footer>
+      <header data-role="header" class="floating-header">
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#page-animal-edit">Edit</a></li>
+         </ul>
+      </header>
    </section>
+
 
 
 

@@ -266,13 +266,10 @@ p {
 /* MAP AND MARKER */
 .map {
    position: absolute;
-   /*top: 50px;*/
+   top: 0;
    left: 0;
    width: 100%;
    height: 100%;
-   background-image: url(../img/map.png);
-   background-size: cover;
-   background-position: center;
 }
 
 .icon-marker {
@@ -285,12 +282,12 @@ p {
    transform: rotate(-45deg);
 }
 
-.map-item-img {
+/*.map-item-img {
     object-position: center;
     object-fit: cover;
     height: 100%;
 }
-
+*/
 
 
 
@@ -467,11 +464,19 @@ p {
 
 
 /* ANIMAL PROFILE */
+.floating-header {
+    position: absolute;
+    background-color: rgba(255,255,255,0.15);
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+}
+
+
 .animal-profile-top {
-    /*background-image: url(../img/pet-img-1.jpg);*/
-    border-radius: 1em;
-    height: 25vh;
-    margin: 20px;
+    flex: none;
+    height: 40vh;
 }
 
 .nav {
@@ -484,14 +489,17 @@ p {
 
 .nav li {
     flex: 1 1 auto;
-    padding: 0 1
-em
-;
+    padding: 0 1em;
     text-align: center;
     line-height: var(--header-height);
 }
 
-.map-2 {
+.animal-profile-bottom {
+    flex: 1 1 auto;
+    position: relative;
+}
+
+/*.map-2 {
    position: absolute;
    top: 310px;
    left: 0;
@@ -500,7 +508,7 @@ em
    background-image: url(../img/map.png);
    background-size: cover;
    background-position: center;
-}
+}*/
 
 
 
