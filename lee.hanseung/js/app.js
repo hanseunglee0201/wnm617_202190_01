@@ -14,8 +14,10 @@ $(()=>{
          case "page-map": MapPage(); break;
          case "page-list": ListPage(); break;
          case "page-user-profile": UserProfilePage(); break;
+         case "page-user-edit": UserEditPage(); break;
          case "page-animal-profile": AnimalProfilePage(); break;
          case "page-animal-edit": AnimalEditPage(); break;
+         case "page-animal-add": AnimalAddPage(); break;
       }
    })
 
@@ -40,6 +42,12 @@ $(()=>{
       if(!$(this).data("id")) throw("No ID on element");
       sessionStorage.animalId = $(this).data("id");
       $.mobile.navigate("#page-animal-profile");
+   })
+   .on("click","[data-setnavigateback]",function(e){
+      $("#location-navigateback").val($(this).data("setnavigateback"))
+   })
+   .on("click",".js-navigate-back",function(e){
+      window.history.go(+$("#location-navigateback").val());
    })
 
 
