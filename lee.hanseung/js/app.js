@@ -18,6 +18,8 @@ $(()=>{
          case "page-animal-profile": AnimalProfilePage(); break;
          case "page-animal-edit": AnimalEditPage(); break;
          case "page-animal-add": AnimalAddPage(); break;
+         case "page-location-choose-animal": LocationChooseAnimalPage(); break;
+         case "page-location-set-location": LocationSetLocationPage(); break;
       }
    })
 
@@ -29,6 +31,40 @@ $(()=>{
    })
    .on("submit","#list-add-form",function(e) {
       e.preventDefault();
+   })
+
+   .on("submit", "#animal-add-form", function(e) {
+      e.preventDefault();
+      animalAddForm();
+   })
+   .on("submit", "#animal-edit-form", function(e) {
+      e.preventDefault();
+      animalEditForm();
+   })
+
+
+   // FORM ANCHOR CLICKS
+
+   .on("click",".js-submituseredit",function(e) {
+      e.preventDefault();
+      userEditForm();
+   })
+   .on("click",".js-submituserpassword",function(e) {
+      e.preventDefault();
+      userEditPasswordForm();
+   })
+   .on("click",".js-submitlocationform",function(e){
+      e.preventDefault();
+      locationAddForm();
+   })
+
+
+
+
+   // ON CHANGE
+
+   .on("change","#location-animal-choice-select",function(e){
+      $("#location-animal-choice").val(this.value)
    })
 
 
@@ -49,6 +85,11 @@ $(()=>{
    .on("click",".js-navigate-back",function(e){
       window.history.go(+$("#location-navigateback").val());
    })
+
+
+   .on("click",".js-chooseanimal",function(e){
+      $("#location-animal-choice").val(sessionStorage.animalId);
+   })   
 
 
    .on("click",".animal-profile-middle li",function(e){

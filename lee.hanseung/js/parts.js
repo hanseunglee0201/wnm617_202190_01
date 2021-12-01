@@ -15,9 +15,21 @@ const makeAnimalList = templater((o)=>`
 `);
 
 
+const makeAnimalProfile = (o) => `
+<div>
+   <h2>${o.name}</h2>
+   <div><strong>type</strong> ${o.type}</div>
+   <div><strong>breed</strong> ${o.breed}</div>
+   <div><strong>description</strong> <p>${o.description}</p></div>
+</div>
+`;
+
+
+
+
 const makeUserProfile = (o) => `
 <div class="user-profile-image">
-	<img src="${o.img}" alt="">
+   <img src="${o.img}" alt="">
 </div>
 <div>
    <h2>${o.name}</h2>
@@ -25,8 +37,6 @@ const makeUserProfile = (o) => `
    <div><a href="#page-user-settings">Settings</a></div>
 </div>
 `;
-
-
 
 const makeAnimalPopup = o => `
 <div class="display-flex animal-jump" data-id="${o.animal_id}">
@@ -104,10 +114,37 @@ ${FormControlInput({
 ${FormControlInput({
    namespace:namespace,
    name:"username",
-   displayname:"Type",
+   displayname:"Username",
    type:"text",
    placeholder:"Type The User Handle",
    value:o.username
 })}
+${FormControlInput({
+   namespace:namespace,
+   name:"email",
+   displayname:"Email",
+   type:"email",
+   placeholder:"Type The Email Address",
+   value:o.email
+})}
 `;
+
+
+
+
+const makeAnimalChoiceSelect = ({animals,name,chosen=0}) => `
+<select id="${name}">
+   ${templater(o=>`
+      <option value="${o.id}" ${o.id===chosen?'selected':''}>${o.name}</option>
+   `)(animals)}
+</select>
+`;
+
+
+
+
+
+
+
+
 
