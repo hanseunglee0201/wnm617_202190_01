@@ -96,5 +96,29 @@ const locationAddForm = async () => {
 
 
 
+const checkSearchForm = async (s) => {
+   let animals = await query({
+      type:'search_animals',
+      params:[s,sessionStorage.userId]
+   });
+
+   if(animals.error) throw(animals.error);
+
+   makeAnimalListSet(animals.result);
+}
+const checkFilter = async (f,v) => {
+   let animals = await query({
+      type:'filter_animals',
+      params:[f,v,sessionStorage.userId]
+   });
+
+   if(animals.error) throw(animals.error);
+
+   makeAnimalListSet(animals.result);
+}
+
+
+
+
 
 

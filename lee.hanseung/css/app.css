@@ -94,7 +94,7 @@ p {
     overflow: hidden;
 }
 
-
+.header,
 [data-role="header"], 
 [data-role="footer"] {
     flex: none;
@@ -108,7 +108,7 @@ p {
 }
 
 
-
+.header ul,
 [data-role="header"] ul,
 [data-role="footer"] ul {
    display: flex;
@@ -121,10 +121,12 @@ p {
    flex: 1 1 auto;
    text-align: center;
 }
+.header a,
 [data-role="header"] a,
 [data-role="footer"] a {
    display: block;
 }
+.header a,
 [data-role="header"] a {
    padding: 0 1em;
 }
@@ -546,26 +548,9 @@ p {
   max-width: 50px;
 }
 
-
-
 .animal-profile-top {
     flex: none;
     height: 40vh;
-}
-
-.nav {
-    list-style-type: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    display: flex;
-}
-
-.nav li {
-    flex: 1 1 auto;
-    padding: 0 1em;
-    text-align: center;
-    line-height: var(--header-height);
 }
 
 .animal-profile-bottom {
@@ -582,6 +567,74 @@ p {
 .animal-profile-middle li.active {
     background-color: var(--color-main-light);
 }
+
+
+
+/* SEARCH & FILTER */
+.search-bar {
+  box-shadow: none;
+  z-index: 2;
+  padding: 0.2em 0.5em;
+}
+.filter-bar {
+  display: flex;
+  padding: 0 1em;
+  width: 100%;
+  overflow-x: auto;
+  gap: 1em;
+}
+.filter-bar a {
+  padding: 0;
+}
+
+.hotdog {
+  padding: 0.5em 1em;
+  display: inline-flex;
+  width: 100%;
+  border-radius: 2em;
+  position: relative;
+}
+
+  .hotdog.white {
+    background-color: var(--color-white);
+  }
+  .hotdog.medium {
+    background-color: var(--color-neutral-light);
+  }
+  .hotdog input {
+    border-width: 0;
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-appearance: none;
+    font: inherit;
+    color: inherit;
+    outline: 0; 
+    flex: 1 1 auto;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  .search-bar .hotdog {
+    height: 100%;
+  }
+
+
+
+.nav {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+}
+
+.nav li {
+    flex: 1 1 auto;
+    padding: 0 1em;
+    text-align: center;
+    line-height: var(--header-height);
+}
+
 /*.map-2 {
    position: absolute;
    top: 310px;

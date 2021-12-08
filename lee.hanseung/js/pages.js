@@ -11,12 +11,12 @@ const resultQuery = async (options) => {
 
 
 const ListPage = async() => {
-	let result = await resultQuery({
+   let animals = await resultQuery({
       type:'animals_by_user_id',
       params:[sessionStorage.userId]
    });
-   
-   $("#page-list .animallist").html(makeAnimalList(result));
+
+   makeAnimalListSet(animals);
 }
 
 

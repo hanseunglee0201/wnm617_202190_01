@@ -162,27 +162,27 @@
 
    <!-- LIST -->
    <section data-role="page" id="page-list">
-      <header data-role="header">
+      <!-- <header data-role="header">
          <h1>Animal List</h1>
-      </header>
+      </header> -->
 
-      <div data-role="main" style="display: flex; flex-direction: column;">
-         <div class="form-control">
-               <form action="" class="form-search">
-                  <input class="search-bar" type="text" name="search" placeholder="Search" style="margin: 4px -3px;">
-               </form>
+      <div data-role="main" class="display-flex flex-vertical">
+
+         <div class="search-bar header flex-none">
+            <form data-ajax="false" id="list-search-form" class="hotdog medium">
+               <input type="search" data-role="none" placeholder="Search for an animal">
+            </form>
          </div>
-
-         <div style="flex: 1; position: relative;">
-             <div class="overscroll floater fill-parent">
+         <div class="filter-bar header flex-none"></div>
+         <div class="position-relative flex-stretch">
+            <div class="overscroll floater fill-parent">
                <div class="animallist"></div>
-             </div>
+            </div>
          </div>
 
          <div class="floater bottom right">
             <a href="#page-animal-add" class="btn-circle">&plus;</a>
          </div>
-
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>

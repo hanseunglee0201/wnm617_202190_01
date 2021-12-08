@@ -43,6 +43,14 @@ $(()=>{
    })
 
 
+
+   .on("submit", "#list-search-form", function(e) {
+   e.preventDefault();
+   let s = $(this).find("input").val();
+   checkSearchForm(s);
+   })
+
+
    // FORM ANCHOR CLICKS
 
    .on("click",".js-submituseredit",function(e) {
@@ -58,7 +66,11 @@ $(()=>{
       locationAddForm();
    })
 
-
+   .on("click","[data-filter]",function(e){
+      let {filter,value} = $(this).data();
+      if(value=="") ListPage();
+      else checkFilter(filter,value);
+   })
 
 
    // ON CHANGE
