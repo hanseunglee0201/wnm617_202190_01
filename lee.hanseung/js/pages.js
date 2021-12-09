@@ -85,7 +85,7 @@ const AnimalProfilePage = async() => {
    });
 
    let [animal] = animal_result;
-   $(".animal-profile-top img").attr("src",animal.img);
+   $(".animal-profile-top>img").attr("src",animal.img);
    $(".animal-profile-bottom .description").html(makeAnimalProfile(animal));
 
    let locations_result = await resultQuery({

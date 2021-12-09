@@ -77,6 +77,10 @@
                   <input class="form-input" type="text" id="signup-email" data-role="none" placeholder="Email">
                </div>
                <div class="form-control">
+                  <label for="signup-username" class="form-label">Username</label>
+                  <input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Username">
+               </div>
+               <div class="form-control">
                   <label for="signup-password" class="form-label">New Password</label>
                   <input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Password">
                </div>
@@ -97,10 +101,34 @@
    </section>
 
 
+   <section data-role="page" id="page-signup2">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <form data-ajax="false" class="form signin-form" id="signup-form2" style="padding:10px">
+            <div class="form-control">
+               <label for="signup-name" class="form-label">Name</label>
+               <input class="form-input" type="text" id="signup-name" data-role="none" placeholder="Your Name">
+            </div>
+            <div class="form-control">
+               <input type="hidden" id="signup-image-name">
+               <label class="image-picker thumbnail">
+                  <input type="file" data-role="none">
+               </label>
+            </div>
+            <div class="form-control">
+               <input type="submit" value="Start" class="form-button" data-role="none">
+            </div>
+         </form>
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
+   </section>
+
+
 
 
    <!-- ONBOARDING 1 -->
-   <section data-role="page" id="page-onboarding1">
+   <!-- <section data-role="page" id="page-onboarding1">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
          <form data-ajax="false" class="form" id="page-onboardiing1-first" style="padding:10px;">
@@ -114,11 +142,11 @@
 
          </form>
       </div>
-   </section>
+   </section> -->
 
 
    <!-- ONBOARDING 2 -->
-   <section data-role="page" id="page-onboarding2">
+   <!-- <section data-role="page" id="page-onboarding2">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
          <form data-ajax="false" class="form" id="page-onboardiing1-second" style="padding:10px;">
@@ -132,7 +160,7 @@
 
          </form>
       </div>
-   </section>
+   </section> -->
 
 
 
@@ -189,8 +217,65 @@
 
 
 
+<!-- ANIMAL PAGES -->
+   <section data-role="page" id="page-animal-profile">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="animal-profile-top">
+            <img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:100%;object-fit:cover">
+            <div class="floater bottom right">
+               <a href="#page-animal-edit-upload" style="font-size:1.25em">
+                  <img src="img/icons/pencil.svg" class="icon">
+               </a>
+            </div>
+         </div>
+         <div class="animal-profile-middle">
+            <ul class="nav">
+               <li class="active">map</li>
+               <li>description</li>
+            </ul>
+         </div>
+         <div class="animal-profile-bottom">
+            <div class="section active">
+               <div class="map"></div>
+               <div class="floater bottom right">
+                  <a href="#page-location-set-location" class="btn-circle js-chooseanimal" data-setnavigateback="-2">&plus;</a>
+               </div>
+            </div>
+            <div class="section">
+               <div class="description"></div>
+            </div>
+         </div>
+      </div>
+      <header data-role="header" class="floating-header">
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#page-animal-edit">Edit</a></li>
+         </ul>
+      </header>
+   </section>
 
-<!-- ADD ANIMAL -->
+
+
+   <section data-role="page" id="page-animal-edit-upload">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submitanimalupload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="animal-upload-filename">
+         <label class="image-picker replace">
+            <input type="file" data-role="none">
+         </label>
+      </div>
+   </section>
+
+
+
    <section data-role="page" id="page-animal-add">
       <header data-role="header">
          <h1>Add Animal!</h1>
@@ -215,8 +300,6 @@
 
 
 
-
-<!-- EDIT ANIMAL -->
    <section data-role="page" id="page-animal-edit">
       <header data-role="header">
          <h1>Edit Animal!</h1>
@@ -226,6 +309,9 @@
       </header>
       <div data-role="main">
          <form class="fill-parent display-flex flex-vertical" id="animal-edit-form" data-ajax="false">
+            <div style="padding:0.5rem 1rem;text-align:right;font-size:0.9em;">
+               <a href="#" class="js-animal-delete">Delete Animal?</a>
+            </div>            
             <div class="flex-stretch position-relative">
                <div class="fill-parent overscroll position-absolute padding-md">
                   
@@ -304,6 +390,7 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
+
    <section data-role="page" id="page-user-settings">
       <header data-role="header">
          <h1>User Edit</h1>
@@ -313,18 +400,13 @@
       </header>
       <div data-role="main" class="overscroll">
          <ul class="nav-page-links">
-            <li>
-               <a href="#page-user-edit">Update User Info</a>
-            </li>
-            <li>
-               <a href="#page-user-edit-password">Change Password</a>
-            </li>
-            <li>
-               <a href="#" class="js-logout">Logout</a>
-            </li>
+            <li><a href="#page-user-edit">Update User Info</a></li>
+            <li><a href="#page-user-edit-password">Change Password</a></li>
+            <li><a href="#page-user-upload">Change Photo</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
          </ul>
       </div>
-   </section>  
+   </section>
 
 
    <section data-role="page" id="page-user-edit">
@@ -345,6 +427,24 @@
                </div>
             </div>
          </form>
+      </div>
+   </section>
+
+
+   <section data-role="page" id="page-user-upload">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submituserupload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="user-upload-filename">
+         <label class="image-picker replace">
+            <input type="file" data-role="none">
+         </label>
       </div>
    </section>
 
@@ -379,38 +479,7 @@
 
 
 
-<!-- ANIMAL PROFILE -->
-   <section data-role="page" id="page-animal-profile">
-      <div data-role="main" class="display-flex flex-vertical">
-         <div class="animal-profile-top">
-            <img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:100%;object-fit:cover">
-         </div>
-         <div class="animal-profile-middle">
-            <ul class="nav">
-               <li class="active">map</li>
-               <li>description</li>
-            </ul>
-         </div>
-         <div class="animal-profile-bottom">
-            <div class="section active">
-               <div class="map"></div>
-               <div class="floater bottom right">
-                  <a href="#page-location-set-location" class="btn-circle js-chooseanimal" data-setnavigateback="-2">&plus;</a>
-               </div>
-            </div>
-            <div class="section">
-               <div class="description"></div>
-            </div>
-         </div>
-      </div>
-      <header data-role="header" class="floating-header">
-         <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#page-animal-edit">Edit</a></li>
-         </ul>
-      </header>
-   </section>
+
 
 
 

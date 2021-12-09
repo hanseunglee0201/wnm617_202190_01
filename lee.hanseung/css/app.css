@@ -548,9 +548,19 @@ p {
   max-width: 50px;
 }
 
+
+
+.user-profile-image img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+
 .animal-profile-top {
     flex: none;
     height: 40vh;
+    position: relative;
 }
 
 .animal-profile-bottom {
@@ -586,6 +596,22 @@ p {
 .filter-bar a {
   padding: 0;
 }
+
+
+.image-picker.replace {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.image-picker.replace input {
+  display: none;
+}
+
 
 .hotdog {
   padding: 0.5em 1em;
