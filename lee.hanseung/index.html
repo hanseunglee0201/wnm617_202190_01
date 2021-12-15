@@ -70,7 +70,7 @@
          <div class="flex-stretch"></div>
             <div class="wrapper">
             <div class="title">Create an account</div>
-            <p>We need only few information!</p>
+            <p style="text-align: center;">We need only few information!</p>
             <form data-ajax="false" class="form" id="signup-form" style="padding:10px">
                <div class="form-control">
                   <label for="signup-email" class="form-label">Email Address</label>
@@ -125,42 +125,6 @@
    </section>
 
 
-
-
-   <!-- ONBOARDING 1 -->
-   <!-- <section data-role="page" id="page-onboarding1">
-      <div data-role="main" class="display-flex flex-vertical">
-         <div class="flex-stretch"></div>
-         <form data-ajax="false" class="form" id="page-onboardiing1-first" style="padding:10px;">
-
-            <div>
-               <h1>Onboarding</h1>
-               <p style="padding-bottom: 15px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque</p>
-            </div>
-
-               <div class="form-control" style="text-align: right"><a href="#page-onboarding2" class="form-button">Next</a></div>
-
-         </form>
-      </div>
-   </section> -->
-
-
-   <!-- ONBOARDING 2 -->
-   <!-- <section data-role="page" id="page-onboarding2">
-      <div data-role="main" class="display-flex flex-vertical">
-         <div class="flex-stretch"></div>
-         <form data-ajax="false" class="form" id="page-onboardiing1-second" style="padding:10px;">
-
-            <div>
-               <h1>Onboarding</h1>
-               <p style="padding-bottom: 15px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque</p>
-            </div>
-
-               <div class="form-control" style="text-align: right"><a href="#page-map" class="form-button">Done</a></div>
-
-         </form>
-      </div>
-   </section> -->
 
 
 
@@ -234,7 +198,7 @@
                <li>description</li>
             </ul>
          </div>
-         <div class="animal-profile-bottom">
+         <div class="animal-profile-bottom" style="background-color: #E5F4F3;">
             <div class="section active">
                <div class="map"></div>
                <div class="floater bottom right">
@@ -242,7 +206,7 @@
                </div>
             </div>
             <div class="section">
-               <div class="description" style="padding-bottom: 1em;"></div>
+               <div class="description" style="padding: 0.5em 0 1em 0.9em; background-color: white; border-radius: 0.5em;"></div>
             </div>
          </div>
       </div>
@@ -338,9 +302,9 @@
       <div data-role="main" style="padding:1em">
          <input type="hidden" id="location-animal-choice">
          <div>
-            <a href="#page-animal-add">Make a new animal</a>
+            <a href="#page-animal-add"><p style="text-align: center;">Make a new animal</p></a>
          </div>
-         <p>Or</p>
+         <p style="text-align: center;">Or</p>
          <div class="form-select location-animal-choice-select"></div>
       </div>
    </section>
@@ -391,6 +355,7 @@
    </section>
 
 
+
    <section data-role="page" id="page-user-settings">
       <header data-role="header">
          <h1>User Edit</h1>
@@ -400,14 +365,15 @@
       </header>
       <div data-role="main" class="overscroll">
          <ul class="nav-page-links">
-            <li><a href="#page-user-edit">Update User Info</a></li>
-            <li><a href="#page-user-edit-password">Change Password</a></li>
-            <li><a href="#page-user-upload">Change Photo</a></li>
+            <li style="padding-bottom: 0.5em;"><a href="#page-user-edit">Update User Info</a></li>
+            <li style="padding-bottom: 0.5em;"><a href="#page-user-edit-password">Change Password</a></li>
+            <li style="padding-bottom: 0.5em;"><a href="#page-user-upload">Change Photo</a></li>
             <br>
             <li><a href="#" class="js-logout">Logout</a></li>
          </ul>
       </div>
    </section>
+
 
 
    <section data-role="page" id="page-user-edit">

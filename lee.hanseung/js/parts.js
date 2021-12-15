@@ -1,7 +1,7 @@
 
 const makeAnimalList = templater((o)=>`
-<div class="animallist-item">
-<div class="display-flex animal-jump" data-id="${o.id}">
+<div class="animallist-item" style="border-bottom: 0.05em solid #c8e2d9;">
+<div class="display-flex animal-jump" data-id="${o.id}" style="padding-bottom: 1em;">
    <div class="flex-none animallist-item-image">
       <img src="${o.img}" alt="">
    </div>
@@ -17,10 +17,10 @@ const makeAnimalList = templater((o)=>`
 
 const makeAnimalProfile = (o) => `
 <div>
-   <h2>${o.name}</h2>
-   <div><strong>type</strong> ${o.type}</div>
-   <div><strong>breed</strong> ${o.breed}</div>
-   <div><strong>description</strong> <p>${o.description}</p></div>
+   <h2 style="border-bottom: 0.05em solid #52bd96; margin-right: 1em; padding-bottom: 0.5em;">${o.name}</h2>
+   <div style="padding-bottom: 0.3em;"><strong>type</strong> ${o.type}</div>
+   <div style="padding-bottom: 0.3em;"><strong>breed</strong> ${o.breed}</div>
+   <div style="padding-bottom: 0.3em;"><strong>description</strong> <p style="margin-top: 1.5px;">${o.description}</p></div>
 </div>
 `;
 
@@ -34,7 +34,7 @@ const makeUserProfile = (o) => `
 <div>
    <h2>${o.name}</h2>
    <h3>&commat;${o.username}</h3>
-   <div><a href="#page-user-settings">Settings</a></div>
+   <div><a href="#page-user-settings" class="form-button ui-btn ui-shadow ui-corner-all">Settings</a></div>
 </div>
 `;
 

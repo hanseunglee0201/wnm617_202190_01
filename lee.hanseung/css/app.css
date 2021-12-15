@@ -3,7 +3,7 @@
     --color-neutral-medium: #999;
     --color-neutral-dark: #444;
 
-    --color-main-light: #def2f9;
+    --color-main-light: #E5F4F3;
     --color-main-medium: #52bd96;
     --color-main-dark: #122D4E;
 
@@ -169,7 +169,7 @@ p {
     width: 100%;
     display: inline-block;
     border-width: 0;
-    border-bottom: 1px solid var(--color-neutral-medium);
+    border-bottom: 0.5px solid #c8e2d9;
     margin: 0;
     padding: 0.5em 1em;
     outline: 0;
@@ -218,7 +218,7 @@ p {
 }
 
 .form-select select {
-    background-color: var(--color-neutral-light);
+    background-color: var(--color-main-light);
     border-width: 0;
     padding: 0.5em 1em;
     font: inherit;
@@ -236,7 +236,7 @@ p {
    top: 50%;
    transform: translateY(-50%);
    font-size: 0.8em;
-   color: var(--color-neutral-medium);
+   color: var(--color-main-medium);
 }
 
 
@@ -510,7 +510,7 @@ p {
     vertical-align: middle;
     /*margin: 0.4em;*/
     border-radius: 25%;
-    border: 0.7em solid var(--color-main-medium);
+    border: 0.5em solid var(--color-main-medium);
 }
 .animallist-item-description {
 }
